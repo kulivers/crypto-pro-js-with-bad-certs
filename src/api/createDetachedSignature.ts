@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { CADESCOM_AUTHENTICATED_ATTRIBUTE_SIGNING_TIME } from '../constants';
 import { _afterPluginsLoaded } from '../helpers/_afterPluginsLoaded';
 import { _extractMeaningfulErrorMessage } from '../helpers/_extractMeaningfulErrorMessage';
@@ -74,6 +75,7 @@ export const createDetachedSignature = _afterPluginsLoaded(
         let signature: string;
 
         try {
+          console.log('ok i got it');
           signature =
             __cadesAsyncToken__ +
             cadesSignedData.SignHash(cadesHashedData, cadesSigner, cadesplugin.CADESCOM_PKCS7_TYPE);
